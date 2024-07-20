@@ -1,8 +1,6 @@
-![image info](https://stimg.cardekho.com/pwa/img/carDekho-newLogo.svg)
 
 <center> 
     
----
 # Pre-Owned Car Price Prediction 
 ###  Machine Learning Project
 ---  
@@ -49,5 +47,7 @@ The benefits of this solution include:
 
 ## About Us:
 Siddharth Kumbarkar
+
 Sara Nambiar
+
 Isha Shah

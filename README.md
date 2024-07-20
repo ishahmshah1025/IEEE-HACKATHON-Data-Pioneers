@@ -13,7 +13,7 @@ Develop a Machine Learning model that predicts the correct price of a pre-owned 
 Ensure the model uses an up-to-date dataset relevant to the Indian car market.
 Consider various factors that affect a car’s price for accurate predictions.
 
-## Process Flow of Project
+## Process Flow of Project:
 1. Understanding Problem Statement
 2. Getting System Ready
 3. Data Collection
@@ -34,7 +34,7 @@ Consider various factors that affect a car’s price for accurate predictions.
 ## Approach:
 We propose to develop a machine learning model that can predict the price of a used car based on its features. The model will be trained on a dataset of used cars that have been sold on Cardekho.com in India. The model will then be able to be used to predict the price of any used car, given its features.
 
-## Objective
+## Objective:
 To build suitable Machine Learning Model for Used Car Price Prediction.
 
 ## Benefits:

@@ -29,7 +29,8 @@ Consider various factors that affect a car’s price for accurate predictions.
 12. Selection of Best Model 
 13. Generating Pickle file
 14. Developing Frontend
-15. Integrating ML model with Frontend
+15. Integrating ML model with Frontend using Flask
+16. Hosting the model using render
 
 ## Approach:
 We propose to develop a machine learning model that can predict the price of a used car based on its features. The model will be trained on a dataset of used cars that have been sold on Cardekho.com in India. The model will then be able to be used to predict the price of any used car, given its features.
@@ -45,12 +46,8 @@ The benefits of this solution include:
 
 **We believe that this project has the potential to make a significant impact on the used car market in India.**
 
-## How to Run the Code:
-1. Save all the files in a folder.
-2. Open that folder with VS code.
-3. Run model.py
-4. In terminal type python home.py
-5. The terminal will give you a local host link with which you can access the project.
+## Project Link
+https://ieee-hackathon-data-pioneers.onrender.com 
 
 ## About Us:
 Siddharth Kumbarkar
@@ -58,3 +55,10 @@ Siddharth Kumbarkar
 Sara Nambiar
 
 Isha Shah
+
+
+
+![Screenshot 2024-07-22 223846](https://github.com/user-attachments/assets/7bed6a97-0a97-418f-a588-beaf8287c923)
+
+
+

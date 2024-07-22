@@ -23,7 +23,7 @@ fuel_dic = {"CNG":0,"Diesel":1,"Electric":2,"LPG":3,"Petrol":4}
 
 @app.route('/')
 def home():
-    return render_template('home2.html')
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():

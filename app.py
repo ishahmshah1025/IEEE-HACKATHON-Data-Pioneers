@@ -70,7 +70,7 @@ def predict():
     prediction = model.predict(new_data_encoded_df)
     adjusted_prediction = prediction[0] + prediction[0]*0.10
 
-    return render_template('home2.html', prediction_text=f'Estimated Price: ₹{adjusted_prediction:.2f}')
+    return render_template('index.html', prediction_text=f'Estimated Price: ₹{adjusted_prediction:.2f}')
 
 
     

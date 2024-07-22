@@ -50,6 +50,7 @@ def predict():
         'engine': engine,
         'seats': seats,
         'mileage': mileage
+    
     }
 
     # Convert the encoded input to a DataFrame

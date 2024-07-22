@@ -45,6 +45,13 @@ The benefits of this solution include:
 
 **We believe that this project has the potential to make a significant impact on the used car market in India.**
 
+## How to Run the Code:
+1. Save all the files in a folder.
+2. Open that folder with VS code.
+3. Run model.py
+4. In terminal type python home.py
+5. The terminal will give you a local host link with which you can access the project.
+
 ## About Us:
 Siddharth Kumbarkar
 

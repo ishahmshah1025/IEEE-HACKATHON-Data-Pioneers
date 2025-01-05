@@ -1,0 +1,612 @@
+<html>
+<head>
+  <title>Car Price Prediction</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ 
+  <style>
+       body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+     
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      width: 92%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: none;
+    }
+
+    .header a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 100px;
+      padding-left: 50px;
+      padding-right: 50px;
+      flex-wrap: wrap;
+      padding-bottom: 150px;
+    }
+
+    .container2 {
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 50px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .plan {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      padding: 20px;
+      background-color: transparent;
+      border-radius: 5px;
+      text-align: left;
+      color: #333;
+    }
+
+    .plan2 {
+      flex: 1;
+      min-width: 300px;
+      max-width: 1000px;
+      padding: 40px;
+      font-weight: bold;
+      background-color: transparent;
+      border-radius: 5px;
+      text-align: right;
+      color: #333;
+    }
+
+    .plan3 {
+      flex: 1;
+      min-width: 240px;
+      margin-top: 0px;
+      padding: 20px;
+      font-weight: bold;
+      background-color: transparent;
+      border-radius: 5px;
+      text-align: center;
+      color: #333;
+    }
+
+    .accuracy {
+      color: #fff;
+      margin: 40px auto 0;
+      width: 210px;
+      height: 100px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #0b263d;
+      font-family: 'Oleo Script';
+      font-size: 70px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .title-button {
+      padding: 10px;
+      width: 100px;
+      background-color: #dcb50b;
+      color: #fff;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .booking-section {
+      background-color: rgb(235, 217, 179);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      padding: 8px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .booking-section div:not(:last-child) {
+            border-right: 1px solid rgb(235, 165, 15);
+        }
+    .booking-section div {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .booking-section div h4 {
+        
+            font-size: 14px;
+            color: rgb(189, 82, 16);
+            font-weight: bold;
+        }
+        .booking-section div p {
+           
+            font-size: 16px;
+            color: #333;
+        }
+
+    .color-container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 400px;
+    }
+
+    .orange, .darkorange {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .orange {
+      background-color: rgb(235, 217, 179);
+      justify-content: flex-start;
+    }
+
+    .darkorange {
+      background-color: rgb(204, 174, 110);
+      justify-content: center;
+    }
+
+    .car-image {
+      max-width: 120%;
+      height: auto;
+      object-fit: contain;
+      position: absolute;
+      right: 15%; 
+      z-index: 10; 
+      
+      height: auto;
+
+    }
+
+    .text-content {
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      gap:5px;
+      align-items: flex-start;
+      justify-content: left;
+      text-align: left;
+      margin-left: 90px; 
+      font-family: Oleo Script;
+      font-size: 1.5rem;
+      font-weight: bold;
+}
+.text-content h3{
+  margin-top: -20px;
+  margin-left: 5px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+ .car-button{
+padding: 10px;
+      width: 100px;
+      background-color: #dcb50b;
+      color: #fff;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+}
+    .footer {
+      background-color: #0b263d;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left, .footer-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .header {
+        padding: 20px;
+        width: calc(100% - 40px);
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .container {
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .plan, .plan2, .plan3 {
+        min-width: 100%;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 36px;
+      }
+
+      .booking-section {
+        flex-direction: column;
+        
+      }
+     
+      .booking-section div {
+        border-right: none;
+        border-bottom: 1px solid rgb(235, 165, 15);
+        color:orange;
+      }
+      .booking-section div h4 {
+       
+        color:rgb(74, 50, 6);
+      }
+
+      .step{
+        color:orange;
+      }
+
+      .color-container {
+        flex-direction: column;
+      }
+
+      .orange, .darkorange {
+        min-height: 300px;
+      }
+
+      .car-image {
+        position: relative;
+        right: 0;
+        
+        width: 160%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .title {
+        font-size: 28px;
+      }
+
+      .accuracy {
+        width: 150px;
+        height: 150px;
+        font-size: 50px;
+      }
+    }
+  
+
+
+  </style>
+</head>
+<body style=" background-image: url('{{ url_for('static', filename='images/cars1.jpg') }}');">
+  <div class="header">
+    <div class="logo">CarWise</div>
+    <nav>
+      <a href="#about-us">About</a>
+      <a href="{{ url_for('predict_page') }}">Predict</a>
+
+      <a href="https://www.cardekho.com/">Booking</a>
+      <a href="#contact-us">Contacts</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="plan">
+      
+      <div class="title">Car Price Prediction</div>
+      <a href="{{ url_for('predict_page') }}"><button class="title-button"> Predict</button></a>
+
+    </div>
+
+    <div class ="plan2">Get accurate insights on car prices with <br> our AI-driven predictions
+  </div>
+</div>
+
+    <div class="container3">
+       
+        <div class="booking-section">
+            <div >
+                <h4>Step 1</h4>
+                <svg width="50px" height="50px" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M17.197 5.46A.824.824 0 0 0 16.5 5h-9a.824.824 0 0 0-.697.46l-1.988 4.638L5.285 9H3v1.5a.501.501 0 0 0 .5.5 2.572 2.572 0 0 1 .367-.388A2.532 2.532 0 0 0 3 12.522V19.5a.501.501 0 0 0 .5.5h2a.501.501 0 0 0 .5-.5v-1.831A46.229 46.229 0 0 0 12 18a46.244 46.244 0 0 0 6.001-.331L18 19.5a.501.501 0 0 0 .5.5h2a.501.501 0 0 0 .5-.5v-6.978a2.534 2.534 0 0 0-.87-1.909 2.523 2.523 0 0 1 .359.387h.011a.501.501 0 0 0 .5-.5V9h-2.286zM7.66 6h8.68l1.715 4H5.945zM5 19H4v-1.79a1.983 1.983 0 0 0 .613.235c.118.024.254.048.387.071zm15 0h-1v-1.484c.133-.023.269-.047.387-.07A1.989 1.989 0 0 0 20 17.21zm-.525-7.632A1.53 1.53 0 0 1 20 12.522v2.946a1.015 1.015 0 0 1-.808.997A43.178 43.178 0 0 1 12 17a43.255 43.255 0 0 1-7.192-.535A1.015 1.015 0 0 1 4 15.468v-2.946a1.532 1.532 0 0 1 .524-1.156 1.49 1.49 0 0 1 .568-.307L5.296 11h13.406l.205.06a1.493 1.493 0 0 1 .568.308zM17 13h2v1a1 1 0 0 1-1 1h-2zM7 13l1 2H6a1 1 0 0 1-1-1v-1zm2 1h6v1H9z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+            <p >Enter Brand and Model of Car</p>
+            </div>
+            <div class="step">
+                <h4 >Step 2</h4>
+                <svg fill="#000000" width="50px" height="50px"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 512 512" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M200.348,150.359c-0.008-9.205-7.463-16.667-16.668-16.682l-66.81-0.111c-27.618,0-50.087,22.469-50.087,50.087v100.174
+                                c0,9.22,7.475,16.696,16.696,16.696h100.284c9.222,0,16.702-7.484,16.696-16.709L200.348,150.359z M100.174,267.13v-83.478
+                                c0-9.206,7.49-16.807,16.668-16.807l50.129,0.083l0.081,100.202H100.174z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M485.494,338.007l-33.391-37.375c-10.175-11.393-29.146-4.186-29.146,11.124v48.505c0,3.069-2.497,5.565-5.565,5.565
+                                s-5.565-2.497-5.565-5.565v-26.368c0-11.413,0-305.832,0-317.197C411.826,7.475,404.351,0,395.13,0H283.826
+                                c-9.22,0-16.696,7.475-16.696,16.696v50.087H116.87C52.428,66.783,0,119.21,0,183.652v278.261C0,489.531,22.469,512,50.087,512
+                                h311.652c4.447,0,8.819-0.588,13.058-1.732c6.674,1.139,13.472,1.732,20.333,1.732C460.023,512,512,460.44,512,404.783
+                                C512,368.099,486.579,339.222,485.494,338.007z M300.522,33.391h77.913v33.391h-77.913V33.391z M33.391,183.652
+                                c0-46.03,37.448-83.478,83.478-83.478c9.627,0,238.851,0,261.565,0v152.79c-15.587-15.668-35.523-26.669-57.239-31.359
+                                l-0.459-0.099c-7.075-1.524-14.336,1.65-17.972,7.898c-3.636,6.249-2.859,14.103,1.958,19.495
+                                c0.18,0.206,18.061,20.835,18.061,44.58s-17.88,44.375-18.016,44.528c-0.805,0.9-15.059,17.102-22.322,40.428H33.391V183.652z
+                                M50.087,478.609c-9.206,0-16.696-7.49-16.696-16.696v-50.087h245.182c2.079,23.915,15.206,49.831,33.031,66.783H50.087z
+                                M395.13,478.609c-46.81,0-83.478-36.982-83.478-73.826c0-23.745,17.88-44.374,18.017-44.528
+                                c1.082-1.211,26.505-30.091,26.505-66.776c0-5.985-0.676-11.762-1.814-17.245c14.95,14.939,24.075,35.523,24.075,57.66v26.368
+                                c0,21.481,17.476,38.957,38.957,38.957s38.957-17.476,38.957-38.957v-4.758l4.211,4.714c0.533,0.613,18.05,21.063,18.05,44.567
+                                C478.609,441.607,441.962,478.609,395.13,478.609z"/>
+                        </g>
+                    </g>
+                    </svg>
+                <p > Enter Car Details</p>
+            </div>
+            <div class="step">
+                <h4 >Step 3</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="50px" height="50px"  viewBox="0 0 24 24"><path d="M12 6c0-.55-.45-1-1-1H5.82l.66-3.18.02-.23c0-.31-.13-.59-.33-.8L5.38 0 .44 4.94C.17 5.21 0 5.59 0 6v6.5c0 .83.67 1.5 1.5 1.5h6.75c.62 0 1.15-.38 1.38-.91l2.26-5.29c.07-.17.11-.36.11-.55V6zm10.5 4h-6.75c-.62 0-1.15.38-1.38.91l-2.26 5.29c-.07.17-.11.36-.11.55V18c0 .55.45 1 1 1h5.18l-.66 3.18-.02.24c0 .31.13.59.33.8l.79.78 4.94-4.94c.27-.27.44-.65.44-1.06v-6.5c0-.83-.67-1.5-1.5-1.5z"/></svg>
+                <p > Choose Condition </p>
+            </div>
+            <div class="step">
+                <h4 >Step 4</h4>
+                <svg width="50px" height="50px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#000000" fill="none"><path d="M42.45,56.47H21.55a2.19,2.19,0,0,1-2.19-2.19V29.08a1.1,1.1,0,0,1,.34-.8L30.8,17.86a1.1,1.1,0,0,1,1.47,0l12,10.44a1.12,1.12,0,0,1,.37.82V54.28A2.19,2.19,0,0,1,42.45,56.47Z" stroke-linecap="round"/><path d="M32,25.61c-4.13,0-7.48-4.05-7.48-9s3.35-9,7.48-9,7.48,4.05,7.48,9" stroke-linecap="round"/><path d="M26.36,31.68H29c2.62,0,5.51.87,5.51,4.86,0,4.32-3.67,6-7.56,5.53a.23.23,0,0,0-.19.39l8.28,8.89" stroke-linecap="round"/><line x1="37.71" y1="31.68" x2="28.45" y2="31.68" stroke-linecap="round"/><line x1="26.49" y1="36.67" x2="37.77" y2="36.67" stroke-linecap="round"/></svg>
+                <p >View Predicted Price</p>
+            </div>
+            <div class="book-now">
+                <img src="{{ url_for('static', filename='images/cars3.jpg') }}" style="height: 100%; width: 90%; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">
+            </div>
+        </div>
+    </div>
+
+    <section id="about-us">
+    <div class="container2">
+        <div class="plan">
+          
+          <div class="title"><br>About Us </div>
+          <p>We are a team dedicated to revolutionizing the pre-owned car market in India through innovative machine learning solutions. <br>Our project focuses on developing a predictive model that accurately estimates the price of used cars, empowering sellers to price their vehicles competitively while helping buyers find the best deals. <br>By leveraging up-to-date data and insights from the car market, we aim to enhance efficiency and transparency in the industry.<br> Join us in transforming the way pre-owned cars are bought and sold!
+        </p>
+
+        </div>
+    
+        <div class ="plan2"><img src="{{ url_for('static', filename='images/cars8.jpg') }}" style="height: 400px; width: 400px; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">
+      </div>
+      <div class ="plan3">
+        <img src="{{ url_for('static', filename='images/cars6.jpg') }}" style="height: 220px; width: 240px ; border-radius: 15px;margin-top: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); ">
+        <p class="accuracy" >  93%</p>
+       
+        
+      </div>
+
+
+    </div>
+</section>
+    <div class="color-container">
+        <div class="orange">
+          <div class="text-content">
+            <h1>Top Selling Car</h1>
+            <h3>Hyundai Verna</h3>
+            <a href="https://www.cardekho.com/hyundai/verna"><button class="car-button">CarDekho</button></a>
+
+          </div>
+        </div>
+        <div class="darkorange">
+          <img src="{{ url_for('static', filename='images/verna2.png') }}" class="car-image" alt="Hyundai Verna">
+        </div>
+      </div>
+
+
+    
+<footer class="footer">
+    <section id="contact-us">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2><br>Contact Us</h2>
+          <p>Feel free to reach out to us for any inquiries, bookings, or support.</p>
+          <ul class="contact-info">
+            <li><i class="fas fa-phone-alt"></i> +39 123 456 7890</li>
+            <li><i class="fas fa-envelope"></i> ishahmshah@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 121 Royal Palms,Pune</li>
+          </ul>
+          <h2><br><br><br>Follow Us</h2>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+       
+          
+        </div>
+        <div class="footer-right">
+         
+            <form class="contact-form" action="contact.php" method="post">
+                <h3>Send us a Message</h3>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+              
+        </div>
+      </div>
+    </div>
+</section>
+  </footer>
+  
+  <style>
+    
+    .footer {
+      background-color: #0b263d;
+      color: #ffffff;
+      padding: 40px 0;
+      font-family: 'Roboto', sans-serif;
+    }
+  
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  
+    .footer-left, .footer-right {
+      flex: 1;
+      min-width: 300px;
+    }
+  
+    .footer-left h2,
+    .footer-right h2,
+    .contact-form h3 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  
+    .footer-left p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      font-size: 16px;
+    }
+  
+    .contact-info li {
+      margin: 8px 0;
+    }
+  
+    .contact-info i {
+      margin-right: 10px;
+      color: #dcb50b;
+    }
+  
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  
+    .contact-form button {
+      padding: 10px;
+      background-color: #dcb50b;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+  
+    .contact-form button:hover {
+      background-color: #b59a0e;
+    }
+  
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+  
+    .social-icons a {
+      color: #ffffff;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+  
+    .social-icons a:hover {
+      color: #dcb50b;
+    }
+  </style>
+  
+      
+      
+</body>
+</html>

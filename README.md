@@ -7,11 +7,6 @@
 
 </center>
 
-## Problem Statement:
-Pre-owned Car Price Prediction
-Develop a Machine Learning model that predicts the correct price of a pre-owned car.
-Ensure the model uses an up-to-date dataset relevant to the Indian car market.
-Consider various factors that affect a car’s price for accurate predictions.
 
 ## Process Flow of Project:
 1. Understanding Problem Statement
@@ -47,14 +42,19 @@ The benefits of this solution include:
 **We believe that this project has the potential to make a significant impact on the used car market in India.**
 
 ## Project Link
-https://ieee-hackathon-data-pioneers.onrender.com 
+https://wisewheels-jv53.onrender.com
 
 ## About Us:
+
+Isha Shah
+
 Siddharth Kumbarkar
 
 Sara Nambiar
 
-Isha Shah
+![image](https://github.com/user-attachments/assets/14fcb06a-c6d3-4b66-b852-6cbed5fb0539)
+![image](https://github.com/user-attachments/assets/4cb6aa47-6b1d-407d-9f80-4b14d3ff57cc)
+
 
 
 
